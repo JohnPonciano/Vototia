@@ -1,0 +1,182 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin: 0px;
+    background: linear-gradient(to left,#ea88b1, #f953c6,#f47098,#e07ca2, #b91d73,#c04498,#2e022c); 
+    background-position: center;
+    background-repeat: no-repeat;
+  	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+.container{
+    padding-top: 6%;
+    padding-right: 1%;
+    height: 600px;
+}
+.container img{
+    margin-left: 64%;
+    display: flex;
+    width: 40%;
+    flex-flow: row;
+    align-content: center;
+    overflow: hidden;
+}
+
+
+.particulas{
+    max-width: 100%;
+    margin-top: -45%;
+}
+
+.texto{
+    margin-bottom: -5%;
+    margin-left: 10%;  
+}
+
+.texto a{
+    text-decoration:none; 
+    color: white;
+}
+
+
+.filtros img{
+    transform: scale(1);
+}
+
+
+
+.filtros .texto{
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.filtros{
+    overflow: hidden;
+}
+
+
+
+
+.bg-text{
+    color: white;
+    
+    font-size: 80px;
+    margin-left: 8%;
+    margin-top: 20%;
+    animation: pulse 5s infinite;
+}
+
+.index{
+    z-index: 1;
+    margin-top: -43%;
+}
+
+.footer{
+    background: black;
+    width: 100%;
+    height: 82px;
+    margin-top: -65px;  
+    
+}
+
+
+
+
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+@keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+}
+
+
+
+@media only screen and (max-width: 735px){
+
+    .filtros{
+        overflow: scroll;
+    }
+
+    .bg-text{
+        font-size: 47px;
+    }
+
+    .texto {
+        margin-left: 10%;
+        margin-top: -20%;
+        padding-bottom: 8%;
+    }
+    .index {
+        z-index: 1;
+        margin-top: -43%;
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        padding-top: 20%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container img {
+        margin-left: -14%;
+        display: flex;
+        width: 115%;
+        flex-flow: row;
+        align-content: center;
+        overflow: hidden;
+        margin-bottom: -35%;
+    }
+
+    .particulas{
+        max-width: 100%;
+        margin-top: -178%;
+    }
+    .footer {
+        transform: scale(1);
+        background: black;
+        width: 100%;
+        height: 68px;
+        margin-top: 20%;
+    }
+}
